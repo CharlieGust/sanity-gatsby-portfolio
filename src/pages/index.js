@@ -1,20 +1,68 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import { white } from "ansi-colors";
 
-const IndexPage = () => (
+export const query = graphql`
+  {
+    allSanityProject {
+      edges {
+        node {
+          title
+          description
+          slug {
+            current
+          }
+          image {
+            asset {
+             fluid{
+                ...GatsbySanityImageFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <ul
+    style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'space-between',
+        listStyle: 'none',
+        padding: 0
+          }}
+    >
+      {data.allSanityProject.edges.map(({ node: project }) => (
+        <li
+          key={project.slug.current}
+           style={{
+            flex: "auto",
+            minWidth: "30%",
+            maxWidth: '45%',
+            margin: '1rem',
+            border: "3px solid #2E8B57",
+            borderRadius: "5px",
+          }}
+        >
+        {/* style={{ borderBottom: "3px solid black" }} */}
+          <Image fluid={project.image.asset.fluid} alt={project.title} />
+          <h2 style={{ margin: "0.5rem", fontsize: "20px" }}>
+            {/* style{{ color: black}} */}
+            <Link to={project.slug.current}>{project.title}</Link>
+          </h2>
+          <p style={{ margin: "0.5rem" }}>{project.description}</p>
+        </li>
+      ))}
+    </ul>
   </Layout>
 )
 

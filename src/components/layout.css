@@ -41,12 +41,15 @@ template {
 }
 a {
   background-color: transparent;
+  color: black;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
 a:hover {
-  outline-width: 0;
+  outline-width: 5;
+  color: #2E8B57;
 }
+
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
@@ -199,7 +202,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
+  color: hsla(0, 5%, 12%, 0.8);
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -237,6 +240,7 @@ h1 {
   font-size: 2.25rem;
   line-height: 1.1;
 }
+
 h2 {
   margin-left: 0;
   margin-right: 0;
