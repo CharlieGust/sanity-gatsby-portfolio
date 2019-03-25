@@ -11,7 +11,8 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import Corner from './github/Corner';
+import Corner from './Corner'
+import Footer from "./footer"
 
 
 const Layout = ({ children }) => (
@@ -38,10 +39,7 @@ const Layout = ({ children }) => (
           }}
         >
           <main>{children}</main>
-          <footer style={{ textAlign: "center", fontWeight: 700 }}>
-            © {new Date().getFullYear()}, CWG
-            {` `}
-          </footer>
+          <Footer />
         </div>
       </>
     )}

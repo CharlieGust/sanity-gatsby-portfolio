@@ -8,6 +8,7 @@ query ($slug: String) {
     sanityProject(slug: {current: {eq: $slug}}) {
       title
       description
+      link
       image{
         asset{
           fluid{
@@ -24,6 +25,12 @@ export default ({ data}) => (
         <Image fluid={data.sanityProject.image.asset.fluid} alt={data.sanityProject.title} />
         <h1>{data.sanityProject.title}</h1>
         <p>{data.sanityProject.description}</p>
+        <p><a 
+        href={data.sanityProject.link}
+        >
+        Link
+        </a>
+        </p>
         <Link to="/">Back to home</Link>
     </Layout>
 )
