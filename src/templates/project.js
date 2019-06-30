@@ -4,33 +4,37 @@ import Layout from "../components/layout"
 import Image from "gatsby-image"
 
 export const query = graphql`
-query ($slug: String) {
-    sanityProject(slug: {current: {eq: $slug}}) {
+  query($slug: String) {
+    sanityProject(slug: { current: { eq: $slug } }) {
       title
       description
       link
-      image{
-        asset{
-          fluid{
+      image {
+        asset {
+          fluid {
             ...GatsbySanityImageFluid
           }
         }
       }
     }
-  }  
+  }
 `
 
-export default ({ data}) => (
-    <Layout>
-        <Image fluid={data.sanityProject.image.asset.fluid} alt={data.sanityProject.title} />
-        <h1>{data.sanityProject.title}</h1>
-        <p>{data.sanityProject.description}</p>
-        <p><a 
-        href={data.sanityProject.link}
-        >
-        Link
-        </a>
-        </p>
-        <Link to="/">Back to home</Link>
-    </Layout>
+export default ({ data }) => (
+  <Layout>
+    <Image
+      style={{ border: "3px double black", borderRadius: "5px" }}
+      fluid={data.sanityProject.image.asset.fluid}
+      alt={data.sanityProject.title}
+    />
+    <h1 style={{ textAlign: "center", color: "white" }}>
+      {data.sanityProject.title}
+    </h1>
+    <p style={{ textAlign: "center", color: "#cecece" }}>
+      {data.sanityProject.description}
+    </p>
+    <h2 style={{ textAlign: "center" }}>
+      <a href={data.sanityProject.link}>Link</a>
+    </h2>
+  </Layout>
 )

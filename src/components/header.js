@@ -1,13 +1,16 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { lazy } from "react"
+{
+  /* background: `rgb(27, 28, 29)`, */
+}
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rgb(27, 28, 29)`,
+      backgroundColor: "#282828",
       marginBottom: `1.45rem`,
-      border: "2px solid black",
+      borderBottom: "4px double black",
       textAlign: "center",
     }}
   >
@@ -22,13 +25,10 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `#2E8B57`,
             letterSpacing: "2px",
-            textDecoration: `none`
+            textDecoration: "none",
           }}
-         
         >
-        
           {siteTitle}
         </Link>
       </h1>

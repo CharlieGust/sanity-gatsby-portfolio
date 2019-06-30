@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Charlies Porfölj.`,
+    title: `Charlies Portfölj`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -16,11 +16,11 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: "gatsby-source-sanity",
       options: {
-        projectId: 'aequqpsb',
-        dataset: 'production'
-      }
+        projectId: "aequqpsb",
+        dataset: "production",
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -28,8 +28,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#4ead59`,
+        theme_color: `#4ead59`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },

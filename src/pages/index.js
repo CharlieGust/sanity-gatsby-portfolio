@@ -17,7 +17,7 @@ export const query = graphql`
           }
           image {
             asset {
-             fluid{
+              fluid {
                 ...GatsbySanityImageFluid
               }
             }
@@ -32,27 +32,28 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <ul
-    style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        alignItems: 'space-between',
-        listStyle: 'none',
-        padding: 0
-          }}
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        alignItems: "space-between",
+        listStyle: "none",
+        padding: 0,
+      }}
     >
       {data.allSanityProject.edges.map(({ node: project }) => (
         <li
           key={project.slug.current}
-           style={{
+          style={{
             flex: "auto",
             minWidth: "30%",
-            maxWidth: '45%',
-            margin: '1rem',
-            border: "3px solid #2E8B57",
+            maxWidth: "45%",
+            margin: "1rem",
+            border: "3px double black",
             borderRadius: "5px",
+            color: "#cecece",
           }}
         >
-        {/* style={{ borderBottom: "3px solid black" }} */}
+          {/* style={{ borderBottom: "3px solid black" }} */}
           <Image fluid={project.image.asset.fluid} alt={project.title} />
           <h2 style={{ margin: "0.5rem", fontsize: "20px" }}>
             {/* style{{ color: black}} */}
