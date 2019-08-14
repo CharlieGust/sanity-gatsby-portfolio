@@ -1,11 +1,11 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { lazy } from "react"
+import React from "react"
 {
   /* background: `rgb(27, 28, 29)`, */
 }
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }) => (     
   <header
     style={{
       backgroundColor: "#282828",
@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
       textAlign: "center",
     }}
   >
-    <div
+     <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
@@ -29,11 +29,25 @@ const Header = ({ siteTitle }) => (
             textDecoration: "none",
           }}
         >
-          {siteTitle}
+          Challes startsida
         </Link>
       </h1>
-    </div>
+      <h2 style={{ margin: 0, padding: 10}}>
+        <Link
+          to="page-3"
+          style={{
+            letterSpacing: "2px",
+            textDecoration: "none",
+          }}
+        >
+          Mina skills
+        </Link>
+      </h2>
+    </div> 
+    
   </header>
+
+
 )
 
 Header.propTypes = {

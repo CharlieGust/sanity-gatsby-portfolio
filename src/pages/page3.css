@@ -1,0 +1,28 @@
+  
+  .container {
+    flex-direction: row;
+    font-weight: 800;
+  }
+
+  .col-sm-3 {
+    color: white;
+    padding-top: 1em;
+    padding-left: 3em;
+    
+  }
+  
+  .sideBar {
+    font-family: "Permanent Marker", cursive;
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .sideBar h1 {
+    letter-spacing: 0.0625em;
+    font-family: "Permanent Marker", cursive;
+
+  }
+  /* 
+     border-right: 2px solid black;
+     border-left: 2px solid black; */
+  
