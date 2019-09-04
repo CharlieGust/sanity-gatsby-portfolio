@@ -3,33 +3,75 @@ import Image from "../components/image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { InlineIcon } from '@iconify/react';
-import gmailIcon from '@iconify/icons-simple-icons/gmail';
-import facebookIcon from '@iconify/icons-simple-icons/facebook';
-import githubIcon from '@iconify/icons-simple-icons/github';
+import { Animate, AnimateGroup } from "react-simple-animate";
 
+function ListItem(props) {
+  return (
+    <div className="hejsan" style={{  marginLeft: "1rem", display: "inline-block", color: "#E63946"}}>
+      <Animate
+        style={{}}
+        sequenceIndex={props.index}
+        duration={0.2}
+        end={{ opacity: 1, transform: "translateY-10px)" }}
+        start={{ opacity: 0, transform: "translateY(+10)" }}
+      >
+        <h1>{props.value}</h1>
+      </Animate>
+    </div>
+  );
+}
+
+class Itemtabe extends React.Component {
+  render() {
+    const list = [
+      { id: 1, letter: "V" },
+      { id: 2, letter: "ä" },
+      { id: 3, letter: "l" },
+      { id: 4, letter: "k" },
+      { id: 5, letter: "o" },
+      { id: 6, letter: "m" },
+      { id: 8, letter: "m" },
+      { id: 9, letter: "e" },
+      { id: 10, letter: "n" },
+      { id: 11, letter: "!" },
+
+    ];
+
+    const listItems = list.map((list, index) => (
+      <ListItem key={list.id} index={index} value={list.letter} />
+    ));
+
+    return <AnimateGroup play>{listItems}</AnimateGroup>;
+  }
+}
 
 const SecondPage = () => (
+  
   <Layout>
     <SEO title="Page two" />
-   
-    <div style={{ border: "2px solid black", width: `25%`,  marginRight: "1.45rem", float: "left"}}>
+    <div style={{paddingTop: "1rem", border: "2px solid black", width: `25%`,  marginRight: "1.45rem", float: "left"}}>
       <Image />
     </div>
-    <div style={{color: "white", paddingBottom: "4.5rem"}}>
+    
+    <div style={{paddingTop: "1rem", color: "white", paddingBottom: "4.5rem"}}>
+    <Itemtabe />
+
       <p>
-      Mitt namn är Charlie Gustavsson, jag är intresserad av webbutveckling. Utvecklar det mesta i React men har kunskaper i de flesta 
-      webbrelaterade språk och tekniker. Har ni några funderingar eller förslag kontakta mig gärna, helst på mail.
+      Till min enkla sida. Mitt namn är Charlie och sysslar med webbutvecklng och gjort i ett par år. Gillar 
+      <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer"> React</a> men är flexibel och någorlunda lättlärd vilket underlättar i denna bransch.</p>
+
+      <p>
+        Förutom att debugga och svära åt <code>div</code> element umgås jag med min sambo och vänner. Att omringa mig 
+        med människor som utmanar mig både personligt och intellektuellt är ett av mina mål.
       </p>
-      <a href="mailto:charlie.gustavsson@gmail.com">
-      <h3>  <InlineIcon icon={gmailIcon} /> charlie.gustavsson@gmail.com </h3>
-    </a>
-    <a href="https://www.facebook.com/charlie.gustavsson.98" target="_blank" rel="noopener noreferrer">
-    <h3><InlineIcon  icon={facebookIcon} /> facebook</h3>
-    </a>
-    <a href="https://github.com/CharlieGust" target="_blank" rel="noopener noreferrer">
-    <h3><InlineIcon icon={githubIcon} /> github</h3>
-    </a>
+
+      <p>
+        Istället för att jag ska skriva mina egenskaper och kunskaper kan väl du skicka ett mail och fråga 
+        <strong> charlie.gustavsson@gmail.com</strong> <cite>(Om du är lat/smart klickar du på ikonen nedanför).</cite>
+
+      </p>
+
+
       </div>
 
   </Layout>

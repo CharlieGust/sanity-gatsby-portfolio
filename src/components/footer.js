@@ -5,22 +5,20 @@ import facebookIcon from '@iconify/icons-simple-icons/facebook';
 import githubIcon from '@iconify/icons-simple-icons/github';
 
 const Footer = () => (
-  <footer style={{ paddingTop: "1rem", marginTop: "5rem", textAlign: "center", fontWeight: 700 }}>
+  <footer style={{  marginTop: "5rem", textAlign: "center", fontWeight: 700 }}>
     {/* <img style={{width: "20px", height: "20px" }} src={mailLogo} alt="Maillogga" /> */}
     
     <ul
       style={{
         display: "flex",
-        flexWrap: "wrap",
-        alignItems: "space-between",
         listStyle: "none",
+        justifyContent: "center",
         padding: 0,
       }}
     >
         <li
           style={{
-            flex: "auto",
-            maxWidth: "45%",
+            width: "10%",
             margin: "1rem",
           }}
         >
@@ -30,8 +28,7 @@ const Footer = () => (
         </li>
         <li
           style={{
-            flex: "auto",
-            maxWidth: "45%",
+            width: "10%",
             margin: "1rem",
           }}
         >
@@ -41,8 +38,7 @@ const Footer = () => (
         </li>
         <li
           style={{
-            flex: "auto",
-            maxWidth: "45%",
+            width: "10%",
             margin: "1rem",
           }}
         >
