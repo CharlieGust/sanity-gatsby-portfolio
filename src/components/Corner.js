@@ -5,14 +5,15 @@ import "./style.css"
 export default () => (
   <Link to="/page-2" className="github-corner">
     <svg
-      width="70"
-      height="80"
+      width="100"
+      height="110"
       viewBox="0 0 140 140"
       style={{
+        color: "#E63946",
         position: "absolute",
-        top: "12",
+        top: "1rem",
         border: "0",
-        left: "10",
+        left: "3rem",
       }}
     >
       {/* <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" /> */}

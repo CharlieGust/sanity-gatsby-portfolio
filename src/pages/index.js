@@ -48,9 +48,10 @@ const IndexPage = ({ data }) => (
             minWidth: "30%",
             maxWidth: "45%",
             margin: "1rem",
-            border: "3px double black",
+            border: "4px outset #0D1B2A",
             borderRadius: "5px",
-            color: "#cecece",
+            color: "#E0E1DD",
+            backgroundColor: "#415A77"
           }}
         >
           {/* style={{ borderBottom: "3px solid black" }} */}

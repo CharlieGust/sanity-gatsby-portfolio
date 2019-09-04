@@ -28,7 +28,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Corner />
+        <Corner style={{ marginLeft: "5rem"}}/>
         <div
           style={{
             margin: `0 auto`,

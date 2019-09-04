@@ -1,16 +1,13 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-{
-  /* background: `rgb(27, 28, 29)`, */
-}
 
 const Header = ({ siteTitle }) => (     
   <header
     style={{
-      backgroundColor: "#282828",
+      backgroundColor: "#0D1B2A",
       marginBottom: `1.45rem`,
-      borderBottom: "4px double black",
+      borderBottom: "4px double #415A77",
       textAlign: "center",
     }}
   >
@@ -29,7 +26,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: "none",
           }}
         >
-          Challes startsida
+          Challes projekt
         </Link>
       </h1>
       <h2 style={{ margin: 0, padding: 10}}>
@@ -38,9 +35,10 @@ const Header = ({ siteTitle }) => (
           style={{
             letterSpacing: "2px",
             textDecoration: "none",
+            color:"#008CFF"
           }}
         >
-          Mina skills
+          Färdigheter
         </Link>
       </h2>
     </div> 

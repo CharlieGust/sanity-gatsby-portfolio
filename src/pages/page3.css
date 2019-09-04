@@ -12,14 +12,12 @@
   }
   
   .sideBar {
-    font-family: "Permanent Marker", cursive;
       margin-top: 50px;
       text-align: center;
   }
 
   .sideBar h1 {
     letter-spacing: 0.0625em;
-    font-family: "Permanent Marker", cursive;
 
   }
   /* 
