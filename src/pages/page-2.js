@@ -49,7 +49,7 @@ const SecondPage = () => (
   
   <Layout>
     <SEO title="Page two" />
-    <div style={{paddingTop: "1rem", border: "2px solid black", width: `25%`,  marginRight: "1.45rem", float: "left"}}>
+    <div style={{paddingTop: "1rem", width: `25%`,  marginRight: "1.45rem", float: "left"}}>
       <Image />
     </div>
     
@@ -57,8 +57,11 @@ const SecondPage = () => (
     <Itemtabe />
 
       <p>
-      Till min enkla sida. Mitt namn är Charlie och sysslar med webbutvecklng och gjort i ett par år. Gillar 
-      <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer"> React</a> men är flexibel och någorlunda lättlärd vilket underlättar i denna bransch.</p>
+      Till min portfölj. Jag heter Charlie och sysslar med webbutvecklng och gjort i ett par år. Gillar 
+      <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer"> React</a> men är flexibel och någorlunda lättlärd.
+      Den här sidan är byggd med<a href="https://gatsbyjs.org" target="_blank" rel="noopener noreferrer"> Gatsby</a> som är baserat på React och <a href="https://www.sanity.io." target="_blank" rel="noopener noreferrer">Sanity </a>
+       som hanterar sidans projekt.
+      </p>
 
       <p>
         Förutom att debugga och svära åt <code>div</code> element umgås jag med min sambo och vänner. Att omringa mig 
@@ -66,8 +69,8 @@ const SecondPage = () => (
       </p>
 
       <p>
-        Istället för att jag ska skriva mina egenskaper och kunskaper kan väl du skicka ett mail och fråga 
-        <strong> charlie.gustavsson@gmail.com</strong> <cite>(Om du är lat/smart klickar du på ikonen nedanför).</cite>
+        Istället för lista mina egenskaper och kunskaper (det är så många) får du hellre skicka ett mail och fråga 
+        <strong> charlie.gustavsson@gmail.com</strong>
 
       </p>
 
